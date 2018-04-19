@@ -57,6 +57,11 @@ function ggbOnInit(param) {
 		ggbApplet.registerObjectUpdateListener("H_2", "pointListener");
 		ggbApplet.registerObjectUpdateListener("I_2", "pointListener");
 		
+		//applet reverse updates
+		ggbApplet2.registerObjectUpdateListener("B_2", "applet2PointListener");
+		ggbApplet2.setColor("B_2", 0, 225, 0);
+		ggbApplet4.setColor("L_2", 0, 225, 0);
+		ggbApplet4.setVisible("L_2", true);
 		
 		//applet 3 updates
 		ggbApplet.registerObjectUpdateListener("A_3", "pointListener");
@@ -86,14 +91,49 @@ function ggbOnInit(param) {
 	}
 }
  
-function abcListener(objName) {
-      // get value from applet1 and set value in applet2	
-	var changedValue = ggbApplet.getValue(objName);            
-	ggbApplet2.setValue(objName, changedValue);		
+function applet2PointListener(objName) {
+	// get x-coord from the changed points in applet2
+	// and set points in applet
+	xcoord = ggbApplet2.getXcoord("B_2");   
+	ycoord = ggbApplet2.getYcoord("B_2");
+	ggbApplet4.setCoords("L_2", ycoord, xcoord);	
+
+	xcoord = ggbApplet2.getXcoord("C_2");   
+	ycoord = ggbApplet2.getYcoord("C_2");
+	ggbApplet4.setCoords("M_2", ycoord, xcoord);
+	
+	xcoord = ggbApplet2.getXcoord("D_2");   
+	ycoord = ggbApplet2.getYcoord("D_2");
+	ggbApplet4.setCoords("N_2", ycoord, xcoord);
+	
+	xcoord = ggbApplet2.getXcoord("E_2");   
+	ycoord = ggbApplet2.getYcoord("E_2");
+	ggbApplet4.setCoords("O_2", ycoord, xcoord);	
+
+	xcoord = ggbApplet2.getXcoord("F_2");   
+	ycoord = ggbApplet2.getYcoord("F_2");
+	ggbApplet4.setCoords("P_2", ycoord, xcoord);
+	
+	xcoord = ggbApplet2.getXcoord("G_2");   
+	ycoord = ggbApplet2.getYcoord("G_2");
+	ggbApplet4.setCoords("Q_2", ycoord, xcoord);
+	
+	xcoord = ggbApplet2.getXcoord("H_2");   
+	ycoord = ggbApplet2.getYcoord("H_2");
+	ggbApplet4.setCoords("R_2", ycoord, xcoord);	
+
+	xcoord = ggbApplet2.getXcoord("I_2");   
+	ycoord = ggbApplet2.getYcoord("I_2");
+	ggbApplet4.setCoords("S_2", ycoord, xcoord);
+	
+	xcoord = ggbApplet2.getXcoord("H_2");   
+	ycoord = ggbApplet2.getYcoord("H_2");
+	ggbApplet4.setCoords("T_2", ycoord, xcoord);
+	
 }
  
 function pointListener(objName) {		
-	// get x-coord from the changed pointsin applet1
+	// get x-coord from the changed points in applet1
 	// and set points in applet2
 	xcoord = ggbApplet.getXcoord("A_2");   
 	ycoord = ggbApplet.getYcoord("A_2");
@@ -122,6 +162,8 @@ function pointListener(objName) {
 	xcoord = ggbApplet.getXcoord("I_2");   
 	ycoord = ggbApplet.getYcoord("I_2");
 	ggbApplet2.setCoords("J_2", xcoord, ycoord);
+	
+	
 	
 	
 	// and set points in applet3
