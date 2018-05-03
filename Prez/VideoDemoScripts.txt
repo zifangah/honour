@@ -1,0 +1,25 @@
+~~~part 1 PLQ 2D 5 points
+This html page shows Geogebra Applet to Applet communication
+a piecewise linear function in 2D,(sub)derivative 
+inverse of the sub-derivative, the conjugates, 
+
+~~~when a point is moved,
+the corresponding derivative changes dynamically, 
+you will notice the same for the inverse,and the conjugate
+~~~
+when a (sub)-derivative is moved, 
+a piece-wise quadratic function pass through the two points, 
+smoothen the pw function
+~~~part 2 PLQ 3D
+this is a piecewise convex function in 3D, 
+each plane has a gradient vector in the centre;
+the slope of the plane changes the gradient;
+user can manipulate the domain of the function on the blue plane;
+~~~
+each of the sub-gradient is mapped on the orange plane,
+it changes its location when the plane is changed;
+~~~
+these subgradient is mapped to its respective conjugate
+conjugate changes dynamically with user input from the domain as well
+
+ 
